@@ -16,10 +16,12 @@ image_bytes=buf.getvalue()
 logging.basicConfig(level=logging.INFO)
 
 async def main():
+    #create a stub with a channel to connect server
     async with grpc.aio.insecure_channel('localhost:50051') as channel:
         stub=InferenceServerStub(channel)
         start=time.perf_counter()
-
+        
+        #send request msg with stub to call the server
         res:InferenceReply=await stub.inference(
             InferenceRequest(image=image_bytes)
         )
