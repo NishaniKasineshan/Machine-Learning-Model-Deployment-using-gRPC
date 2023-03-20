@@ -10,6 +10,8 @@ This repo contains python scripts that are needed to deploy a machine learning m
 
 **inference.proto** contains the service and the messages between the client and server
 
+**inference.py** contains the function to load the model and make predictions. The gRPC server will call this function.
+
 After defining the services and messages in the protocol buffer file we generate the client and server code using the **grpcio-tools**,
 `python -m grpc_tools.protoc -I . --python_out=. --pyi_out=. --grpc_python_out=. inference.proto`
 
