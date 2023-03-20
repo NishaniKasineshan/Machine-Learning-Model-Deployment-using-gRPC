@@ -1,0 +1,18 @@
+syntax="proto3";
+
+//define the inference service
+service InferenceServer{
+    rpc inference (InferenceRequest) returns (InferenceReply){}
+}
+
+//define the request message containing the image
+message InferenceRequest{
+    bytes image=1;
+}
+
+
+//define the response message containing the classes ids
+message InferenceReply{
+    string cls =1;
+    float confidence=2;
+}
