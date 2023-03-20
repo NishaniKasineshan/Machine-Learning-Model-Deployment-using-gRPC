@@ -4,10 +4,10 @@ import numpy as np
 import io
 
 #upload the model
-Model=tf.keras.models.load_model("potatoes.h5")
+Model=tf.keras.models.load_model("model.h5")
 
 #classes to be predicted
-class_names=["Potato__Early_bright","Potato__Late_bright","Potato__healthy"]
+class_names=["cls_0","cls_1","cls_2"]
 
 #Function defined to prepare the image for inference
 def preprocess(image):
@@ -25,7 +25,7 @@ def inference(image):
     return preds
 
 if __name__=="__main__":
-   img_path='lb.JPG'
+   img_path='XXX.JPG'
    img=preprocess(img_path)
    print(inference(img))
     

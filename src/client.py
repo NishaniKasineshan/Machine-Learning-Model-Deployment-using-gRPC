@@ -7,7 +7,7 @@ from inference_pb2_grpc import InferenceServerStub#InfernceServerStub is the grp
 import io
 from PIL import Image
 
-img_path='el.JPG'
+img_path='XXX.JPG'
 image=Image.open(img_path)
 buf=io.BytesIO()
 image.save(buf,format="JPEG")
