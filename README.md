@@ -1,5 +1,5 @@
 # Machine-Learning-Model-Deployment-using-gRPC
-This repo contains python scripts that are needed to deploy a machine learning model behind gRPC running using asyncio. 
+This repo contains python scripts that are needed to deploy a machine learning model behind gRPC running using asyncio. You'll find the instructions on how to use gRPC to deploy machine learning model, how to build gRPC server and client in Python, how to define gRPC services and messages and how to serialize and deserialize data using protocol buffers.
 
 ### Get started
 **To get started first you need to install all the necessary libraries `grpcio`,`grpcio-tools`,`tensorflow`,`pillow`**
